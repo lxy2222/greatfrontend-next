@@ -6,8 +6,12 @@ import Link from "next/link";
 
 const name = "Xiaoyu";
 export const siteTitle = "Great Frontend User Interface Problems";
+interface LayoutProps {
+    children: React.ReactNode;
+    home?: boolean;
+}
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: LayoutProps) {
     return (
         <div className={styles.container}>
             <Head>
